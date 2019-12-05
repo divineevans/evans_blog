@@ -3,7 +3,7 @@ import './layout.css'
 
 import Header from '../../components/Header/header'
 import Footer from '../../components/Footer/footer'
-import Home from '../../components/Home/home'
+//import Home from '../../components/Home/home'
 
 class Layout extends Component {
 
@@ -25,7 +25,7 @@ class Layout extends Component {
                     onHideNav={()=> this.toggleSidenav(false)}
                     onOpenNav={() => this.toggleSidenav(true)}
                 />
-                <Home />
+                {/* <Home /> */}
                 {this.props.children}
                 <Footer />
             </div>
