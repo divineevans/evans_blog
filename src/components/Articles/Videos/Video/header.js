@@ -1,9 +1,8 @@
 import React from 'react';
-
 import TeamNfo from '../../Elements/teamNfo';
-import PostData from '../../Elements/postData';
+//import teamNfo from '../../Elements/teamNfo';
 
-const Header = (props) =>{
+const Header = (props) => {
 
     const teamNfo = (team) => {
         return team ? (
@@ -11,14 +10,9 @@ const Header = (props) =>{
         ): null;
     }
 
-    const postData = (date, author)=>(
-        <PostData data={{date,author}}/>
-    )
-
     return(
         <div>
             {teamNfo(props.teamData)}
-            {postData(props.date, props.author)}
         </div>
     )
 }

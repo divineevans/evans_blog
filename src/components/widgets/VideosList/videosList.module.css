@@ -33,3 +33,7 @@
 .right {
     flex-grow: 1;
 }
+
+.relatedWrapper {
+    margin: 0 5px;
+}

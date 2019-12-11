@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { URL } from '../../../../config';
 
-//import styles from '../../articles.module.css';
+import styles from '../../articles.module.css';
 import Header from './header';
-import Body from './body';
+
 
 class BlogArticles extends Component {
 
@@ -33,12 +33,22 @@ class BlogArticles extends Component {
         const team = this.state.team;
      
         return(
-            <div className={StyleSheet.articleWrapper}>
+            <div className={styles.articleWrapper}>
                 <Header
                 teamData={team[0]}
                 date={article.date}
                 author={article.author} />
-                <Body />
+            <div className={styles.articleBody} >
+                <h1>{article.title}</h1>
+                <div className={styles.articleImage} 
+                    style={{
+                        background:`url('/images/articles/${article.image}')`
+                    }}>
+                </div>
+                <div className={styles.articleText}>
+                    {article.body}
+                </div>
+            </div>  
                 
             </div>
         )
